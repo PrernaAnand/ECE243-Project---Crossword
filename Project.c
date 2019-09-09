@@ -43,16 +43,16 @@ int main(void)
 {
     int size_of_crossword = 11;
     int count = 0;					// infinite counter that increments 
-    int alpha_count = 0;			// every time a key is presssed
+    int alpha_count = 0;				// every time a key is presssed
 
     volatile int * pixel_ctrl_ptr = (int *)0xFF203020;
     volatile int * character_ctrl_ptr = (int *)0xFF203030;
     
-	volatile int * KEY_ptr = (int *)0xff200050;
+    volatile int * KEY_ptr = (int *)0xff200050;
     
     int KEY_value;
     pixel_buffer_start = *pixel_ctrl_ptr;
-	character_buffer_start = *character_ctrl_ptr;
+    character_buffer_start = *character_ctrl_ptr;
         
     clear_screen();
     
